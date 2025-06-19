@@ -5,6 +5,27 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".songsActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
 
+    <Button
+        android:id="@+id/songsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:text="Your Songs" />
+
+    <Button
+        android:id="@+id/averageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Average Rating" />
+
+    <Button
+        android:id="@+id/mainBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Main Screen" />
 </LinearLayout>
