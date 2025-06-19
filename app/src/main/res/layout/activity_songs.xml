@@ -35,5 +35,11 @@
         android:layout_height="wrap_content"
         android:text="Humble-Kendrick Lamar, Blessings-Calvin Harris, Summer too Hot-Chris Brown, Yellow-ColdPlay" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rap-5/5, Dance song-2/5,Best Love Song-3/5,Memories-1/5" />
+
 
 </LinearLayout>
