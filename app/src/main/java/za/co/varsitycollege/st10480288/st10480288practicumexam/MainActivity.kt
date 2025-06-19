@@ -26,6 +26,15 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.startBtn).setOnClickListener {
             startActivity(Intent(this, songsActivity::class.java))
+
+            findViewById<Button>(R.id.startBtn2).setOnClickListener {
+                startActivity(Intent(this, songsActivity::class.java))
+            }
+
+        }
+        findViewById<Button>(R.id.startBtn3).setOnClickListener {
+            startActivity(Intent(this,songsActivity::class.java))
+
         }
 
 
