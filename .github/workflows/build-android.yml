@@ -1,1 +1,30 @@
+# Name of the Github Actions workflow
+name: Android Build
+# Start the workflow on push events to the 'master' branch
+on:
+  push:
+    branches: [ "master"]
 
+jobs:
+  builds:
+  #lastest version of Ubuntu as the runner enviroment was used
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1 : Look at  the responsitory so that the workflow can access the code
+      - name: Check out respository
+        uses: actions/checkout@v2
+        
+    # Step 2 : Set up Java Development kit (JDK) version 17 
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu' 
+          java-version: 17
+          
+    # Step 3 : Cache Gradle dependencies to speed up subsequent builds
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew assembleDebug
